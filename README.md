@@ -28,6 +28,24 @@ On the other terminal, execute the following commands
 cd test4-server
 npm install
 npm start
-
 ```
 
+# Dependencies:
+## Backend
+- [Apollo Sever Express](https://github.com/apollographql/apollo-server/tree/main/packages/apollo-server-express)
+- [Cors](https://github.com/expressjs/cors)
+- [Express](https://github.com/expressjs/express)
+- [Googleapis](https://github.com/googleapis/googleapis)
+- [Jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+- [Mongoose](https://github.com/Automattic/mongoose)
+- [Nodemailer](https://github.com/nodemailer/nodemailer)
+
+## Frontend
+- [Apollo Client](https://github.com/apollographql/apollo-client)
+- [JwtDecode](https://github.com/auth0/jwt-decode)
+- [React Router](https://reactrouter.com/)
+- [Semantic ui](https://semantic-ui.com/)
+
+## DataBase
+
+MongoDB
