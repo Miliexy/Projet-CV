@@ -32,6 +32,7 @@ function AddEducation({ data:{id,education,userid} }) {
     <div>
       {user && user.id === userid && (
     <div>
+
       <p>
         <input
           type="text"

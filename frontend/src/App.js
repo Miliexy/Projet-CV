@@ -17,8 +17,7 @@ import Register from "./pages/Register";
 import SinglePost from "./pages/SinglePost";
 import Confirm from "./pages/Confirm";
 import UploadTest from "./pages/UploadTest";
-
-
+import srtresume from "./pages/srt-resume"
 
 
 function App() {
@@ -34,6 +33,7 @@ function App() {
           <Route exact path="/postusr" component={Postusr}/>
           <Route exact path="/posts/:postId" component={SinglePost}/>
           <Route exact path="/test" component={UploadTest}/>
+          <Route exact path="/restest" component={srtresume}/>
         </Container>
       </Router>
     </AuthProvider>

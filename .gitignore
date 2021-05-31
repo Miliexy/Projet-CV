@@ -35,6 +35,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+src/assets
+
 
 # TypeScript v1 declaration files
 typings/
@@ -74,3 +76,5 @@ typings/
 
 # FuseBox cache
 .fusebox/
+frontend/src/assets/
+frontend/semantic.json
