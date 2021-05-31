@@ -31,6 +31,8 @@ function AddExtra({ data:{id,workExperience,userid} }) {
 
   return (
     <div>
+      {user && user.id === userid && (
+    <div>
       <p>
         <input
           type="text"
@@ -49,21 +51,8 @@ function AddExtra({ data:{id,workExperience,userid} }) {
         disabled={comment.trim() === ""}
         onClick={submitWork}
       />
-      {workExperience.map((work) => (
-        <Card fluid key={work.id}>
-          <Card.Content>
-            <Card.Header>
-              From {work.beginDate} To {work.endDate}{" "}
-            </Card.Header>
-            <Card.Description>{work.body}</Card.Description>
-          </Card.Content>
-          {user && user.id === userid && (
-            <div className="delete">
-              <DeleteButton postId={postId} commentId={work.id} dif={1} />
             </div>
-          )}
-        </Card>
-      ))}
+      )}
     </div>
   );
 }

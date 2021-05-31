@@ -60,15 +60,41 @@ function SinglePost(props) {
           <div class="inner">
             <section>
               <h1>Work Experience</h1>
-              {user && user.id === userid && (
+
                <AddExtra data={data.getPost} />
-              )}
+               {workExperience.map((work) => (
+        <Card fluid key={work.id}>
+          <Card.Content>
+            <Card.Header>
+              From {work.beginDate} To {work.endDate}{" "}
+            </Card.Header>
+            <Card.Description>{work.body}</Card.Description>
+          </Card.Content>
+          {user && user.id === userid && (
+            <div className="delete">
+              <DeleteButton postId={postId} commentId={work.id} dif={1} />
+            </div>
+          )}
+        </Card>
+      ))}
             </section>
             <section>
               <h1>Education</h1>
-              {user && user.id === userid && (
+
                 <AddEducation data={data.getPost} />
-                )}
+                {education.map((work) => (
+        <Card fluid key={work.id}>
+          <Card.Content>
+            <Card.Header>
+              From {work.beginDate} To {work.endDate}{" "}
+            </Card.Header>
+            <Card.Description>{work.body}</Card.Description>
+          </Card.Content>
+          {user && user.id === userid && (
+            <DeleteButton postId={id} commentId={work.id} dif={2} />
+          )}
+        </Card>
+      ))}
             </section>
             <section>
               <h1>Technical Skills</h1>

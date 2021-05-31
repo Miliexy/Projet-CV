@@ -30,6 +30,8 @@ function AddEducation({ data:{id,education,userid} }) {
 
   return (
     <div>
+      {user && user.id === userid && (
+    <div>
       <p>
         <input
           type="text"
@@ -48,21 +50,11 @@ function AddEducation({ data:{id,education,userid} }) {
         disabled={comment.trim() === ""}
         onClick={submitWork}
       />
-      {education.map((work) => (
-        <Card fluid key={work.id}>
-          <Card.Content>
-            <Card.Header>
-              From {work.beginDate} To {work.endDate}{" "}
-            </Card.Header>
-            <Card.Description>{work.body}</Card.Description>
-          </Card.Content>
-          {user && user.id === userid && (
-            <DeleteButton postId={id} commentId={work.id} dif={2} />
-          )}
-        </Card>
-      ))}
-    </div>
-  );
-}
+      
+      </div>
+      )}
+      </div>
+      );
+    }
 
 export default AddEducation;
