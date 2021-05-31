@@ -25,7 +25,7 @@ npm start
 On the other terminal, execute the following commands
 
 ``` 
-cd test4-server
+cd backend
 npm install
 npm start
 ```
