@@ -91,7 +91,10 @@ function SinglePost(props) {
             <Card.Description>{work.body}</Card.Description>
           </Card.Content>
           {user && user.id === userid && (
-            <DeleteButton postId={id} commentId={work.id} dif={2} />
+            <div className="delete">
+              <DeleteButton postId={id} commentId={work.id} dif={2} />
+
+            </div>
           )}
         </Card>
       ))}
